@@ -10,8 +10,6 @@
 
 <style lang="scss" scoped>
 
-  .responsive-image {
-    width: 100%;
-  }
+  @import './ResponsiveImage.scss';
 
 </style>

@@ -105,54 +105,6 @@ export default {
 
 <style lang="scss" scoped>
   
-  $font: Helvetica, sans-serif;
-
-  .centered {
-    text-align: center;
-  }
-
-  .control {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-
-  }
-  
-  .control label {
-    display: block;
-    font-weight: bold;
-  }
-
- .control label + input, .control textarea {
-    width: 100%;
-    font-size: inherit;
-    border-radius: 5px
-  }
-
-  .error {
-    display: inline-block;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px;
-    font-size: 20px;
-    color: #C00; 
-  }
-
-  #app {
-    font-family: $font;
-    text-align: center;
-    color: #000;
-    margin-top: 50px;
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-weight: bolder;
-    text-transform: uppercase;
-  }
-
-  h2 {
-    font-weight: lighter;
-  }
+  @import './Save.scss';
 
 </style>

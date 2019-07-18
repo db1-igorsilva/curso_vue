@@ -54,23 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 
-    .button {
-        display: inline-block;
-        padding: 5px;
-        border-radius: 5px;
-        margin: 15px;
-        font-size: 12px;
-    }
-    
-    .button-danger {
-        background: #C00;
-        color: #FFF;
-    }
-
-    .button-regular {
-        background: #0AA;
-        color: #FFF;
-    }
+    @import './Button.scss';
 
 </style>
 

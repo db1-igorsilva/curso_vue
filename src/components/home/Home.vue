@@ -110,40 +110,6 @@
 
 <style lang="scss">
 
-  $font: Helvetica, sans-serif;
-
-  #app {
-    font-family: $font;
-    text-align: center;
-    color: #000;
-    margin-top: 50px;
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  .pics-list, .pics-list-item {
-    list-style: none;
-    display: inline-block;
-  }
-
-  .filter {
-    display: block;
-    width: 95%;
-  }
-
-  h1 {
-    font-weight: bolder;
-  }
-
-  h2 {
-    font-weight: lighter;
-  }
-
-  ul {
-    padding: 5px;
-    li {
-      margin: 0 10px;
-    }
-  }
+  @import './Home.scss';
 
 </style>
