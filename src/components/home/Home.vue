@@ -5,12 +5,12 @@
     <h1> {{ title }} </h1>
     <h2> Pick your pictures: </h2>
 
-    <p v-show="message"> Error: {{ message }} </p>
+    <p v-show="message"> {{ message }} </p>
     
     <input type="search" class="filter" @input="typedFilter = $event.target.value" placeholder="Type the picture's title">
 
     <ul class="pics-list">
-      <li class="pics-list-item" v-for='(pic, img) of filteredPics' :key='img'>
+      <li class="pics-list-item" v-for='pic of filteredPics' :key='pic._id'>
         <pic-frame :title="pic.titulo">
           <responsive-image slot="content"
             :url="pic.url"

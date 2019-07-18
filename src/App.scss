@@ -1,0 +1,20 @@
+$font: Helvetica, sans-serif;
+
+#app {
+    font-family: $font;
+    text-align: center;
+    color: #000;
+    background: #EFF;
+    border: 2.5px double #000;
+    padding: 100px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.page-enter, .page-leave-active {
+    opacity: 0;
+}
+
+.page-enter-active, .page-leave-active {
+    transition: opacity.5s;
+}

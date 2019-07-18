@@ -25,4 +25,6 @@
 
 <style lang="scss" scoped>
 
+    @import './Navigator.scss';
+
 </style>
