@@ -5,7 +5,7 @@
     <h1> {{ title }} </h1>
     <h2> Pick your pictures: </h2>
 
-    <p v-show="message"> {{ message }} </p>
+    <p v-show="message"> Error: {{ message }} </p>
     
     <input type="search" class="filter" @input="typedFilter = $event.target.value" placeholder="Type the picture's title">
 
@@ -89,7 +89,7 @@
           },
           error => {
             console.log(error);
-            this.message = 'Server could not remove ' + pic.titulo + '.';
+            this.message = error.message;
           });
       }
 
@@ -101,7 +101,7 @@
 
       this.service.getAll()
         .then(importedPics => this.pics = importedPics,
-        error => message = 'NullPointerException.');
+        error => this.message = error.message);
 
     }
   }

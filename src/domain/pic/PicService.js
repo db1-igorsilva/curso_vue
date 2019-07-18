@@ -20,7 +20,11 @@ export default class PicService {
 
         return this._resource
             .query()
-            .then(getResponse => getResponse.json());
+            .then(getResponse => getResponse.json(),
+            error => {
+                console.log(error);
+                throw new Error('NullPointerException');
+            });
 
     }
 
@@ -34,7 +38,12 @@ export default class PicService {
 
     delete(id) {
 
-        return this._resource.delete({ id });
+        return this._resource
+            .delete({ id })
+            .then(null, error => {
+                console.log(error);
+                throw new Error('Picture can\'t be removed');
+            });
 
     }
 
