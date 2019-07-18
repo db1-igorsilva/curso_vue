@@ -2,8 +2,8 @@
 
   <div id="app">
 
-    <h1 v-if="pic._id"> Updating picture {{ pic.titulo }} </h1>
-    <h1 v-else> NEW PICTURE </h1>
+    <h1 v-if="pic._id"> Update {{ pic.titulo }} </h1>
+    <h1 v-else> New picture </h1>
 
     <form @submit.prevent="save()">
 
@@ -148,6 +148,7 @@ export default {
 
   h1 {
     font-weight: bolder;
+    text-transform: uppercase;
   }
 
   h2 {
