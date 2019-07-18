@@ -70,12 +70,18 @@ export default {
 
       save() {
         
-        this.service
-          .save(this.pic)
-          .then(() => {
-            if (this.id) this.$router.push({ name: 'home' });
-          },
-          err => alert('Não salvo.'));
+        this.$validator
+          .validateAll()
+          .then(success => {
+            if (success) {
+              this.service
+                .save(this.pic)
+                .then(() => {
+                  if (this.id) this.$router.push({ name: 'home' });
+                },
+                err => alert('Não salvo.'));
+            }
+          })
 
       }
 
